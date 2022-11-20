@@ -187,8 +187,7 @@ void AVLTree<Key, Value>::insert(const std::pair<const Key, Value> &new_item)
                         loc->setBalance(-1); 
                         insertFix(loc, curr); 
                     }
-                    break; 
-                    //return; 
+                    break;  
                 }
                 else{
                     loc = loc->getLeft(); 
@@ -208,7 +207,6 @@ void AVLTree<Key, Value>::insert(const std::pair<const Key, Value> &new_item)
                         insertFix(loc, curr); 
                     }
                     break; 
-                    //return; 
                 }
                 else{
                     loc = loc->getRight(); 
@@ -384,10 +382,8 @@ void AVLTree<Key, Value>::remove(const Key& key)
     }
     delete n; 
     //patch tree 
-    removeFix(p, diff); 
-
-
-
+    removeFix(p, diff);
+  
 }
 
 template<class Key, class Value>
